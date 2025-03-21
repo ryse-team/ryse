@@ -1,16 +1,23 @@
+<script setup>
+import { useRoute } from 'vue-router';
+
+const route = useRoute()
+</script>
+
 <template>
     <nav
-        class="fixed z-999 self-center bg-black/40 backdrop-blur-md rounded-full w-[90%] shadow-xl flex justify-between items-center py-[.5rem] lg:py-[1rem] px-[1rem] lg:px-[4rem] top-2 border border-zinc-700/30"
+        class="fixed z-999 self-center bg-black/40 backdrop-blur-md rounded-full w-[90%] shadow-xl
+        flex justify-between items-center py-[.8rem] lg:py-[1rem] px-[1rem] lg:px-[4rem] top-2 border border-zinc-700/30"
     >
         <RouterLink to="/">
             <p class="text-xl lg:text-3xl">ryse_</p>
         </RouterLink>
-        <ul class="flex gap-6 text-sm lg:text-lg">
+        <ul class="flex gap-6 text-sm lg:text-lg text-gray-300 underline-offset-4">
             <RouterLink to="/">
-                <li>home</li>
+                <li :class="{'underline decoration-dashed text-white': route.path === '/'}">home</li>
             </RouterLink>
             <RouterLink to="team">
-                <li>team</li>
+                <li :class="{'underline decoration-dashed text-white': route.path === '/team'}">team</li>
             </RouterLink>
         </ul>
     </nav>

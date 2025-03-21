@@ -5,7 +5,7 @@ const videoRef = ref(null)
 
 onMounted(() => {
     if (videoRef.value) {
-        videoRef.value.playbackRate = 0.8
+        videoRef.value.playbackRate = 0.9
     }
 })
 </script>
