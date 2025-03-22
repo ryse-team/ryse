@@ -13,12 +13,13 @@ import ArrowUp from './Icons/ArrowUp.vue'
                 <li><RouterLink to="/team">team</RouterLink></li>
             </ul>
             <ul class="space-y-2">
-                <li class="hover:underline flex gap-2 items-center justify-between">
-                    <a href="https://github.com/ryse-team">Github</a
-                    ><ArrowUp class="fill-white w-4 h-4" />
+                <li class="flex gap-2 items-center justify-between group">
+                    <a href="https://github.com/ryse-team" class="hover:underline">Github</a>
+                    <ArrowUp class="fill-white w-4 h-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 </li>
-                <li class="hover:underline flex gap-2 items-center justify-between">
-                    <a href="#">Linkedin</a><ArrowUp class="fill-white w-4 h-4" />
+                <li class="flex gap-2 items-center justify-between group">
+                    <a href="#" class="hover:underline">Linkedin</a>
+                    <ArrowUp class="fill-white w-4 h-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                 </li>
             </ul>
         </div>
