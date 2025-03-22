@@ -7,12 +7,25 @@
 }
 
 @font-face {
-  font-family: 'Dogica TTF';
-  src: url('./fonts/TTF/dogica.ttf') format('truetype');
+    font-family: 'Dogica TTF';
+    src: url('./fonts/dogica.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Scientifica';
+    src: url('./fonts/scientifica.woff2') format('woff2'),
+         url('./fonts/scientificaBold.woff2') format('woff2'),
+         url('./fonts/scientificaItalic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-size: 12px;
 }
 
 @layer utilities {
-  .font-dogica {
-    font-family: 'Dogica TTF', sans-serif;
-  }
+    .font-dogica {
+        font-family: 'Dogica TTF', sans-serif;
+    }
+    .font-stf {
+        font-family: 'Scientifica', sans-serif;
+    }
 }

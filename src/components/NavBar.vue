@@ -13,12 +13,18 @@ const route = useRoute()
         </RouterLink>
         <ul class="flex gap-6 text-sm lg:text-lg text-gray-300 underline-offset-4">
             <RouterLink to="/">
-                <li class="transition-all duration-400 hover:tracking-widest hover:text-gray-400" :class="{ 'underline decoration-wavy text-white': route.path === '/' }">
+                <li
+                    class="transition-all duration-400 hover:tracking-widest hover:text-gray-400"
+                    :class="{ 'underline decoration-wavy text-white': route.path === '/' }"
+                >
                     home
                 </li>
             </RouterLink>
             <RouterLink to="team">
-                <li class="transition-all duration-400 hover:text-gray-600 hover:tracking-widest" :class="{ 'underline decoration-wavy text-white': route.path === '/team' }">
+                <li
+                    class="transition-all duration-400 hover:text-gray-600 hover:tracking-widest"
+                    :class="{ 'underline decoration-wavy text-white': route.path === '/team' }"
+                >
                     team
                 </li>
             </RouterLink>

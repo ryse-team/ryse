@@ -14,7 +14,7 @@ import ArrowUp from './Icons/ArrowUp.vue'
             </ul>
             <ul class="space-y-2">
                 <li class="hover:underline flex gap-2 items-center justify-between">
-                    <a href="https://github.com/ryse-team">Github</a
+                    <a href="https://github.com/ryse-team" target="_blank">Github</a
                     ><ArrowUp class="fill-white w-4 h-4" />
                 </li>
                 <li class="hover:underline flex gap-2 items-center justify-between">

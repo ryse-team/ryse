@@ -43,7 +43,7 @@ onMounted(() => {
             :variants="variants"
             class="relative z-10 flex flex-col w-full h-full items-center justify-center fade-in"
         >
-            <motion.h1 class="text-white lg:text-7xl text-6xl font-px mb-2" :variants="variants">
+            <motion.h1 class="text-white lg:text-7xl text-6xl mb-2" :variants="variants">
                 ryse
             </motion.h1>
             <motion.p class="text-white lg:text-xl text-lg" :variants="variants">

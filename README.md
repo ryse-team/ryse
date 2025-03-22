@@ -1,3 +1,3 @@
 # ryse
 
-check out here → `https://ryse.pages.dev`  
+check out here → `https://ryse.pages.dev`

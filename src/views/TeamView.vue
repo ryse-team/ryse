@@ -19,7 +19,7 @@ const devs = [
     {
         name: 'kottesh',
         role: 'Lead Developer',
-        division: 'All Rounder',
+        division: 'Infra & Backend',
         linkedin: 'https://www.linkedin.com/in/kottesh',
         github: 'https://www.github.com/kottesh',
     },
