@@ -2,8 +2,8 @@
 @import 'tailwindcss';
 
 @theme {
-  --font-mr: Manrope;
-  --font-px: Pixelify Sans;
+    --font-mr: Manrope;
+    --font-px: Pixelify Sans;
 }
 
 @font-face {
