@@ -5,3 +5,14 @@
   --font-mr: Manrope;
   --font-px: Pixelify Sans;
 }
+
+@font-face {
+  font-family: 'Dogica TTF';
+  src: url('./fonts/TTF/dogica.ttf') format('truetype');
+}
+
+@layer utilities {
+  .font-dogica {
+    font-family: 'Dogica TTF', sans-serif;
+  }
+}
