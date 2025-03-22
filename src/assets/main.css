@@ -1,10 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Pixelify+Sans:wght@400..700&display=swap');
 @import 'tailwindcss';
-
-@theme {
-    --font-mr: Manrope;
-    --font-px: Pixelify Sans;
-}
 
 @font-face {
     font-family: 'Dogica TTF';
