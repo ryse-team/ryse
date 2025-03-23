@@ -4,7 +4,7 @@ import ArrowUp from './Icons/ArrowUp.vue'
 
 <template>
     <footer
-        class="flex flex-col px-[1rem] lg:px-[8rem] py-[4rem] w-full bg-black text-sm lg:text-base"
+        class="z-90 flex flex-col px-[1rem] lg:px-[8rem] py-[4rem] w-full bg-black text-[1.1rem]"
     >
         <p class="self-end mb-4">ryse platforms &copy; {{ new Date().getFullYear() }}</p>
         <div class="flex justify-between w-full">
