@@ -1,6 +1,6 @@
 <script setup>
-import { onMounted, ref } from 'vue'
-import { motion } from 'motion-v'
+import { onMounted, ref } from "vue"
+import { motion } from "motion-v"
 
 const videoRef = ref(null)
 
