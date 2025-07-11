@@ -3,20 +3,20 @@ import { createHead } from '@vueuse/head'
 import { createPinia } from "pinia"
 
 import App from "./App.vue"
-import router from "./router"
+import { routes, scrollBehavior } from "./router"
 
 import "./assets/styles/main.css"
 
 export const createApp = ViteSSG(
   App,
   {
-    routes: router.options.routes,
+    routes,
     base: '/',
+    scrollBehavior,
   },
-  ({ app, router, routes, isCient, url, initialState, head }) => {
-    app.use(createPinia())
+  ({ app, router, routes, isClient, url, initialState, head }) => {
 
-    app.use(router)
+    app.use(createPinia())
 
     const createdHead = createHead()
     app.use(createdHead)
