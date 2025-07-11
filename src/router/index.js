@@ -1,22 +1,40 @@
 import { createRouter, createWebHistory } from "vue-router"
-import HomeView from "@/views/HomeView.vue"
-import TeamView from "@/views/TeamView.vue"
+
+const routes = [
+    {
+        path: '/',
+        name: 'Home',
+        component: () => import('@/views/HomeView.vue')
+    },
+    // {
+    //     path: '/about',
+    //     name: 'About',
+    //     component: () => import('@/views/AboutView.vue')
+    // },
+    {
+        path: '/team',
+        name: 'Team',
+        component: () => import('@/views/TeamView.vue')
+    },
+    // {
+    //     path: '/projects',
+    //     name: 'Projects',
+    //     component: () => import('@/views/ProjectsView.vue')
+    // },
+    {
+        path: '/:pathMatch(.*)*',
+        name: 'NotFound',
+        component: () => import('@/views/NotFoundView.vue')
+    },
+]
 
 const router = createRouter({
-    history: createWebHistory(import.meta.env.BASE_URL),
-    routes: [
-        {
-            path: "/",
-            name: "home",
-            component: HomeView,
-        },
-        {
-            path: "/team",
-            name: "team",
-            component: TeamView,
-        },
-    ],
+    history: createWebHistory(import.meta.env.VITE_BASE_URL),
+    routes,
     scrollBehavior(to, from, savedPosition) {
+        if (savedPosition) {
+            return savedPosition
+        }
         return {
             top: 0,
             left: 0,

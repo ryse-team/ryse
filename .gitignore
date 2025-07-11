@@ -2,20 +2,20 @@
 logs
 *.log
 npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies
 node_modules
-.DS_Store
+
+# Build artifacts
 dist
 dist-ssr
 coverage
 *.local
 
-/cypress/videos/
-/cypress/screenshots/
+# OS generated files
+.DS_Store
+Thumbs.db
 
 # Editor directories and files
 .vscode/*
@@ -27,4 +27,12 @@ coverage
 *.sln
 *.sw?
 
+# TypeScript cache
 *.tsbuildinfo
+
+# Environmental variables
+.env
+
+# Cypress artifacts
+/cypress/videos/
+/cypress/screenshots/

@@ -5,7 +5,11 @@ import vueDevTools from "vite-plugin-vue-devtools"
 import tailwindcss from "@tailwindcss/vite"
 
 export default defineConfig({
-    plugins: [vue(), vueDevTools(), tailwindcss()],
+    plugins: [
+        vue(),
+        vueDevTools(),
+        tailwindcss()
+    ],
     resolve: {
         alias: {
             "@": fileURLToPath(new URL("./src", import.meta.url)),
@@ -13,5 +17,16 @@ export default defineConfig({
     },
     server: {
         host: true,
+    },
+    ssgOptions: {
+        routes: [
+            '/',
+            // '/about',
+            '/team',
+            // '/projects',
+            // '/404',
+        ],
+        script: 'async',
+        formatting: 'prettify',
     },
 })

@@ -1,3 +1,3 @@
 # ryse
 
-check out here → `https://ryse.pages.dev`
+Check out our official site here → `https://ryse.pages.dev`

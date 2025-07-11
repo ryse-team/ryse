@@ -1,13 +1,18 @@
 <script setup>
 import { RouterView } from "vue-router"
-import NavBar from "./components/NavBar.vue"
-import Footer from "./components/Footer.vue"
+
+import TheNavBar from "@/components/layouts/TheNavBar.vue"
+import TheFooter from "@/components/layouts/TheFooter.vue"
 </script>
 
 <template>
-    <div class="flex flex-col max-w-screen font-stf bg-black text-white">
-        <NavBar />
-        <RouterView />
-        <Footer />
+    <div class="flex flex-col min-h-screen overflow-x-hidden font-stf bg-black text-white">
+        <TheNavBar />
+        
+        <main class="flex-grow">
+            <RouterView />
+        </main>
+        
+        <TheFooter />
     </div>
 </template>

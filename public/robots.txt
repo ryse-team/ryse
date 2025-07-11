@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# vite-ssg-sitemap Sitemap placeholder
+Sitemap: https://ryse.pages.dev/sitemap.xml
