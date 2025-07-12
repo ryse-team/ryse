@@ -1,34 +1,42 @@
 <script setup>
 import { onMounted, ref } from "vue"
 import { motion } from "motion-v"
-import { useHead } from '@vueuse/head'
+import { useHead } from "@vueuse/head"
 
 useHead({
-  title: 'ryse - reimagine your software experience | College Tech Team CIT',
-  meta: [
-    {
-      name: 'description',
-      content: 'ryse is a college student tech team for Coimbatore Institute of Technology (CIT) focused on creating innovative software solutions with industrial standards. Learn about our team, projects, and mission.',
-    },
-    {
-      name: 'keywords',
-      content: 'ryse, reimagine your software experience, college tech team, coimbatore institute of technology, cit, software development, web development, innovative solutions, student projects, industrial standards, community, collaboration'
-    },
-    { property: 'og:title', content: 'ryse - reimagine your software experience' },
-    { property: 'og:description', content: 'ryse is a college student tech team for Coimbatore Institute of Technology (CIT) focused on creating innovative software solutions with industrial standards. Learn about our team, projects, and mission.' },
-    { property: 'og:image', content: 'https://ryse.pages.dev/images/ryse.jpg' },
-    { property: 'og:url', content: 'https://ryse.pages.dev/' },
-    { property: 'og:type', content: 'website' },
+    title: "ryse - reimagine your software experience | College Tech Team CIT",
+    meta: [
+        {
+            name: "description",
+            content:
+                "ryse is a college student tech team for Coimbatore Institute of Technology (CIT) focused on creating innovative software solutions with industrial standards. Learn about our team, projects, and mission.",
+        },
+        {
+            name: "keywords",
+            content:
+                "ryse, reimagine your software experience, college tech team, coimbatore institute of technology, cit, software development, web development, innovative solutions, student projects, industrial standards, community, collaboration",
+        },
+        { property: "og:title", content: "ryse - reimagine your software experience" },
+        {
+            property: "og:description",
+            content:
+                "ryse is a college student tech team for Coimbatore Institute of Technology (CIT) focused on creating innovative software solutions with industrial standards. Learn about our team, projects, and mission.",
+        },
+        { property: "og:image", content: "https://ryse.pages.dev/images/ryse.jpg" },
+        { property: "og:url", content: "https://ryse.pages.dev/" },
+        { property: "og:type", content: "website" },
 
-    { name: 'twitter:card', content: 'summary_large_image' },
-    // { name: 'twitter:site', content: '@YourTwitterHandle' },
-    { name: 'twitter:title', content: 'ryse - reimagine your software experience' },
-    { name: 'twitter:description', content: 'ryse is a college student tech team for Coimbatore Institute of Technology (CIT) focused on creating innovative software solutions with industrial standards. Learn about our team, projects, and mission.' },
-    { name: 'twitter:image', content: 'https://ryse.pages.dev/images/ryse.jpg' },
-  ],
-  link: [
-    { rel: 'canonical', href: 'https://ryse.pages.dev/' }
-  ]
+        { name: "twitter:card", content: "summary_large_image" },
+        // { name: 'twitter:site', content: '@YourTwitterHandle' },
+        { name: "twitter:title", content: "ryse - reimagine your software experience" },
+        {
+            name: "twitter:description",
+            content:
+                "ryse is a college student tech team for Coimbatore Institute of Technology (CIT) focused on creating innovative software solutions with industrial standards. Learn about our team, projects, and mission.",
+        },
+        { name: "twitter:image", content: "https://ryse.pages.dev/images/ryse.jpg" },
+    ],
+    link: [{ rel: "canonical", href: "https://ryse.pages.dev/" }],
 })
 
 const videoRef = ref(null)
@@ -63,25 +71,23 @@ onMounted(() => {
             loop
             playsinline
             @contextmenu.prevent
-            aria-label="Abstract mesh animation background" preload="auto" >
+            aria-label="Abstract mesh animation background"
+            preload="auto"
+        >
             <source src="@/assets/mesh.webm#t=0.1" type="video/webm" />
-            Your browser does not support the video tag. </video>
+            Your browser does not support the video tag.
+        </video>
 
         <motion.div
             initial="hidden"
             animate="show"
             :variants="variants"
             class="relative z-10 flex flex-col w-full h-full items-center justify-center text-center px-4 md:px-8 lg:px-16"
-            
-            style="max-width: 1200px; margin-left: auto; margin-right: auto;" 
-            
+            style="max-width: 1200px; margin-left: auto; margin-right: auto"
         >
             <motion.h1 class="text-white text-6xl lg:text-7xl mb-2 font-bold" :variants="variants">
                 ryse
             </motion.h1>
-            <motion.p class="text-white text-lg lg:text-xl mb-1" :variants="variants">
-                reimagine your software experience,
-            </motion.p>
             <motion.p class="text-white text-lg lg:text-xl" :variants="variants">
                 we build perfection
             </motion.p>

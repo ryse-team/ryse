@@ -8,11 +8,11 @@ import TheFooter from "@/components/layouts/TheFooter.vue"
 <template>
     <div class="flex flex-col min-h-screen overflow-x-hidden font-stf bg-black text-white">
         <TheNavBar />
-        
+
         <main class="flex-grow">
             <RouterView />
         </main>
-        
+
         <TheFooter />
     </div>
 </template>

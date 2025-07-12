@@ -1,21 +1,38 @@
 import js from "@eslint/js"
 import pluginVue from "eslint-plugin-vue"
+import vueParser from "vue-eslint-parser"
+import prettierPlugin from "eslint-plugin-prettier"
 import globals from "globals"
-import eslintConfigPrettier from "eslint-config-prettier"
-import eslintPluginPrettier from "eslint-plugin-prettier"
 
 export default [
     {
-        name: "app/files-to-lint",
-        files: ["**/*.{js,mjs,jsx,vue}"],
+        files: ["**/*.vue"],
+        languageOptions: {
+            parser: vueParser,
+            parserOptions: {
+                ecmaVersion: "latest",
+                sourceType: "module",
+                ecmaFeatures: {
+                    jsx: true,
+                },
+            },
+            globals: {
+                ...globals.browser,
+                ...globals.node,
+            },
+        },
+        plugins: {
+            vue: pluginVue,
+            prettier: prettierPlugin,
+        },
+        rules: {
+            ...pluginVue.configs["flat/recommended"][0].rules,
+            "vue/multi-word-component-names": "off",
+            "prettier/prettier": "error",
+        },
     },
-
     {
-        name: "app/files-to-ignore",
-        ignores: ["**/dist/**", "**/dist-ssr/**", "**/coverage/**", "**/*.local"],
-    },
-
-    {
+        files: ["**/*.{js,jsx,ts,tsx}"],
         languageOptions: {
             ecmaVersion: "latest",
             sourceType: "module",
@@ -24,26 +41,13 @@ export default [
                 ...globals.node,
             },
         },
-    },
-
-    js.configs.recommended,
-    ...pluginVue.configs["flat/recommended"],
-    ...pluginVue.configs["flat/vue3-recommended"],
-
-    eslintConfigPrettier, // Disable ESLint rules that conflict with Prettier
-    {
-        rules: {
-            "prettier/prettier": "error", // Report Prettier formatting issues as ESLint errors
-        },
         plugins: {
-            prettier: eslintPluginPrettier,
+            prettier: prettierPlugin,
+        },
+        rules: {
+            ...js.configs.recommended.rules,
+            "no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
+            "prettier/prettier": "error",
         },
     },
-
-    {
-        rules: {
-            "vue/multi-word-component-names": "error",
-            "no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
-        }
-    }
 ]

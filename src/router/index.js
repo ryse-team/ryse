@@ -1,18 +1,18 @@
 export const routes = [
     {
-        path: '/',
-        name: 'Home',
-        component: () => import('@/views/HomeView.vue')
+        path: "/",
+        name: "Home",
+        component: () => import("@/views/HomeView.vue"),
     },
     {
-        path: '/team',
-        name: 'Team',
-        component: () => import('@/views/TeamView.vue')
+        path: "/team",
+        name: "Team",
+        component: () => import("@/views/TeamView.vue"),
     },
     {
-        path: '/:pathMatch(.*)*',
-        name: 'NotFound',
-        component: () => import('@/views/NotFoundView.vue')
+        path: "/:pathMatch(.*)*",
+        name: "NotFound",
+        component: () => import("@/views/NotFoundView.vue"),
     },
 ]
 

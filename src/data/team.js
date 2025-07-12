@@ -17,7 +17,7 @@ export const founders = [
         name: "Anush M",
         role: "Founder & Division Lead",
         division: "Infrastructure",
-        info: "4th year M.Sc. Software Systems student, 2022-27 batch",
+        info: "1st Batch",
         linkedin: "https://www.linkedin.com/in/anushm55",
         github: "https://www.github.com/anushm55",
         // img_src: "/images/team_members/anush_profile.jpg",
@@ -26,7 +26,7 @@ export const founders = [
         name: "Krishneshvar J",
         role: "Founder & Division Lead",
         division: "Frontend",
-        info: "4th year M.Sc. Software Systems student, 2022-27 batch",
+        info: "1st Batch",
         linkedin: "https://www.linkedin.com/in/krishneshvar-j",
         github: "https://www.github.com/Krishneshvar",
         // img_src: "/images/team_members/krishneshvar_profile.jpg",
@@ -35,12 +35,12 @@ export const founders = [
         name: "Shree Kottesh J",
         role: "Founder & Division Lead",
         division: "Backend",
-        info: "4th year M.Sc. Software Systems student, 2022-27 batch",
+        info: "1st Batch",
         linkedin: "https://www.linkedin.com/in/kottesh",
         github: "https://www.github.com/kottesh",
         // img_src: "/images/team_members/kottesh_profile.jpg",
     },
-];
+]
 
 export const leadDevelopers = [
     // {
@@ -51,7 +51,7 @@ export const leadDevelopers = [
     //     github: "https://www.github.com/lead-dev-1",
     //     // img_src: "/images/team_members/lead_dev1_profile.jpg",
     // },
-];
+]
 
 export const developers = [
     // {
@@ -62,7 +62,7 @@ export const developers = [
     //     github: "https://www.github.com/dev-1",
     //     // img_src: "/images/team_members/dev1_profile.jpg",
     // },
-];
+]
 
 export const alumni = [
     // {
@@ -73,4 +73,4 @@ export const alumni = [
     //     github: "https://www.github.com/alumni-1",
     //     // img_src: "/images/team_members/alumni1_profile.jpg",
     // },
-];
+]
