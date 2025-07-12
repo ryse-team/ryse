@@ -1,7 +1,7 @@
 <script setup>
-import ArrowUp from "@/assets/icons/ArrowUpIcon.vue"
-import LinkedInIcon from "@/assets/icons/LinkedInIcon.vue"
-import GitHubIcon from "@/assets/icons/GitHubIcon.vue"
+import ArrowUp from "@/assets/icons/ArrowUpIcon.vue";
+import LinkedInIcon from "@/assets/icons/LinkedInIcon.vue";
+import GitHubIcon from "@/assets/icons/GitHubIcon.vue";
 </script>
 
 <template>
@@ -12,16 +12,17 @@ import GitHubIcon from "@/assets/icons/GitHubIcon.vue"
             <nav aria-label="Footer navigation">
                 <ul class="space-y-2">
                     <li>
-                        <RouterLink to="/" class="hover:underline text-gray-400 hover:text-white"
-                            >Home</RouterLink
-                        >
+                        <RouterLink to="/" class="hover:underline text-gray-400 hover:text-white">
+                            Home
+                        </RouterLink>
                     </li>
                     <li>
                         <RouterLink
                             to="/team"
                             class="hover:underline text-gray-400 hover:text-white"
-                            >Team</RouterLink
                         >
+                            Team
+                        </RouterLink>
                     </li>
                 </ul>
             </nav>

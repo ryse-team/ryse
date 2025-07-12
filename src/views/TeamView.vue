@@ -1,7 +1,7 @@
 <script setup>
-import Card from "@/components/specific/TeamMemberCard.vue"
-import { useHead } from "@vueuse/head"
-import { founders, leadDevelopers, developers, alumni } from "@/data/team.js"
+import Card from "@/components/specific/TeamMemberCard.vue";
+import { useHead } from "@vueuse/head";
+import { founders, leadDevelopers, developers, alumni } from "@/data/team.js";
 
 useHead({
     title: "ryse Team - Meet Our Leaders & Developers | CIT Tech Team",
@@ -28,7 +28,7 @@ useHead({
         { name: "twitter:image", content: "https://ryse.pages.dev/images/ryse.jpg" },
     ],
     link: [{ rel: "canonical", href: "https://ryse.pages.dev/team" }],
-})
+});
 </script>
 
 <template>

@@ -1,8 +1,8 @@
 <script setup>
-import { RouterView } from "vue-router"
+import { RouterView } from "vue-router";
 
-import TheNavBar from "@/components/layouts/TheNavBar.vue"
-import TheFooter from "@/components/layouts/TheFooter.vue"
+import TheNavBar from "@/components/layouts/TheNavBar.vue";
+import TheFooter from "@/components/layouts/TheFooter.vue";
 </script>
 
 <template>

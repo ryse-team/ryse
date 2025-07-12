@@ -1,8 +1,8 @@
 <script setup>
-import { ref, onMounted } from "vue"
-import ArrowUpIcon from "@/assets/icons/ArrowUpIcon.vue"
-import LinkedInIcon from "@/assets/icons/LinkedInIcon.vue"
-import GitHubIcon from "@/assets/icons/GitHubIcon.vue"
+import { ref, onMounted } from "vue";
+import ArrowUpIcon from "@/assets/icons/ArrowUpIcon.vue";
+import LinkedInIcon from "@/assets/icons/LinkedInIcon.vue";
+import GitHubIcon from "@/assets/icons/GitHubIcon.vue";
 
 const props = defineProps({
     name: {
@@ -34,16 +34,16 @@ const props = defineProps({
         default:
             "https://t3.ftcdn.net/jpg/06/84/18/58/240_F_684185884_eKq0i4Ua9GrwKUfluonwGE5xjwxHGyvW.jpg",
     },
-})
+});
 
-const isVisible = ref(false)
-const isHovered = ref(false)
+const isVisible = ref(false);
+const isHovered = ref(false);
 
 onMounted(() => {
     setTimeout(() => {
-        isVisible.value = true
-    }, 100)
-})
+        isVisible.value = true;
+    }, 100);
+});
 </script>
 
 <template>

@@ -12,7 +12,7 @@ const props = defineProps({
         type: String,
         default: "currentColor",
     },
-})
+});
 </script>
 
 <template>

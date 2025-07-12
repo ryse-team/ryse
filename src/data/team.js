@@ -40,7 +40,7 @@ export const founders = [
         github: "https://www.github.com/kottesh",
         // img_src: "/images/team_members/kottesh_profile.jpg",
     },
-]
+];
 
 export const leadDevelopers = [
     // {
@@ -51,7 +51,7 @@ export const leadDevelopers = [
     //     github: "https://www.github.com/lead-dev-1",
     //     // img_src: "/images/team_members/lead_dev1_profile.jpg",
     // },
-]
+];
 
 export const developers = [
     // {
@@ -62,7 +62,7 @@ export const developers = [
     //     github: "https://www.github.com/dev-1",
     //     // img_src: "/images/team_members/dev1_profile.jpg",
     // },
-]
+];
 
 export const alumni = [
     // {
@@ -73,4 +73,4 @@ export const alumni = [
     //     github: "https://www.github.com/alumni-1",
     //     // img_src: "/images/team_members/alumni1_profile.jpg",
     // },
-]
+];

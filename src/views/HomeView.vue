@@ -1,7 +1,7 @@
 <script setup>
-import { onMounted, ref } from "vue"
-import { motion } from "motion-v"
-import { useHead } from "@vueuse/head"
+import { onMounted, ref } from "vue";
+import { motion } from "motion-v";
+import { useHead } from "@vueuse/head";
 
 useHead({
     title: "ryse - reimagine your software experience | College Tech Team CIT",
@@ -37,9 +37,9 @@ useHead({
         { name: "twitter:image", content: "https://ryse.pages.dev/images/ryse.jpg" },
     ],
     link: [{ rel: "canonical", href: "https://ryse.pages.dev/" }],
-})
+});
 
-const videoRef = ref(null)
+const videoRef = ref(null);
 
 const variants = {
     hidden: { opacity: 0, y: 100 },
@@ -52,13 +52,13 @@ const variants = {
             ease: "easeOut",
         },
     },
-}
+};
 
 onMounted(() => {
     if (videoRef.value) {
-        videoRef.value.playbackRate = 0.9
+        videoRef.value.playbackRate = 0.9;
     }
-})
+});
 </script>
 
 <template>

@@ -1,42 +1,42 @@
 <script setup>
-import { useRoute } from "vue-router"
-import { computed, ref, onMounted, onUnmounted } from "vue"
-import { Menu, X } from "lucide-vue-next"
+import { useRoute } from "vue-router";
+import { computed, ref, onMounted, onUnmounted } from "vue";
+import { Menu, X } from "lucide-vue-next";
 
-const route = useRoute()
-const isMobileMenuOpen = ref(false)
-const isMobile = ref(false)
+const route = useRoute();
+const isMobileMenuOpen = ref(false);
+const isMobile = ref(false);
 
 const navLinks = computed(() => [
     { name: "Home", path: "/" },
     { name: "Team", path: "/team" },
     { name: "Projects", path: "/projects" },
     { name: "About", path: "/about" },
-])
+]);
 
 const checkScreenSize = () => {
-    isMobile.value = window.innerWidth < 768
+    isMobile.value = window.innerWidth < 768;
     if (!isMobile.value) {
-        isMobileMenuOpen.value = false
+        isMobileMenuOpen.value = false;
     }
-}
+};
 
 const toggleMobileMenu = () => {
-    isMobileMenuOpen.value = !isMobileMenuOpen.value
-}
+    isMobileMenuOpen.value = !isMobileMenuOpen.value;
+};
 
 const closeMobileMenu = () => {
-    isMobileMenuOpen.value = false
-}
+    isMobileMenuOpen.value = false;
+};
 
 onMounted(() => {
-    checkScreenSize()
-    window.addEventListener("resize", checkScreenSize)
-})
+    checkScreenSize();
+    window.addEventListener("resize", checkScreenSize);
+});
 
 onUnmounted(() => {
-    window.removeEventListener("resize", checkScreenSize)
-})
+    window.removeEventListener("resize", checkScreenSize);
+});
 </script>
 
 <template>

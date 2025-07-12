@@ -1,8 +1,8 @@
-import js from "@eslint/js"
-import pluginVue from "eslint-plugin-vue"
-import vueParser from "vue-eslint-parser"
-import prettierPlugin from "eslint-plugin-prettier"
-import globals from "globals"
+import js from "@eslint/js";
+import pluginVue from "eslint-plugin-vue";
+import vueParser from "vue-eslint-parser";
+import prettierPlugin from "eslint-plugin-prettier";
+import globals from "globals";
 
 export default [
     {
@@ -47,7 +47,13 @@ export default [
         rules: {
             ...js.configs.recommended.rules,
             "no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
-            "prettier/prettier": "error",
+            "prettier/prettier": [
+                "error",
+                {},
+                {
+                    usePrettierrc: true,
+                },
+            ],
         },
     },
-]
+];

@@ -14,15 +14,15 @@ export const routes = [
         name: "NotFound",
         component: () => import("@/views/NotFoundView.vue"),
     },
-]
+];
 
 export const scrollBehavior = (to, from, savedPosition) => {
     if (savedPosition) {
-        return savedPosition
+        return savedPosition;
     }
     return {
         top: 0,
         left: 0,
         behavior: "smooth",
-    }
-}
+    };
+};
