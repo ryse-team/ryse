@@ -1,5 +1,5 @@
 <script setup>
-import Card from "@/components/specific/TeamMemberCard.vue";
+import Card from "@/components/pages/TeamMemberCard.vue";
 import { useHead } from "@vueuse/head";
 import { founders, leadDevelopers, developers, alumni } from "@/data/team.js";
 

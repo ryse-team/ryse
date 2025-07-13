@@ -1,9 +1,7 @@
 <script setup>
-import { onMounted, ref } from "vue";
-import { motion } from "motion-v";
+import { ref, onMounted } from "vue";
 import { useHead } from "@vueuse/head";
-
-import RoutesIntroSection from "@/components/pages/Home/RoutesIntroSection.vue";
+import GridBackground from "@/components/layouts/GridBackground.vue";
 
 useHead({
     title: "ryse - reimagine your software experience | College Tech Team CIT",
@@ -27,9 +25,7 @@ useHead({
         { property: "og:image", content: "https://ryse.pages.dev/images/ryse.jpg" },
         { property: "og:url", content: "https://ryse.pages.dev/" },
         { property: "og:type", content: "website" },
-
         { name: "twitter:card", content: "summary_large_image" },
-        // { name: 'twitter:site', content: '@YourTwitterHandle' },
         { name: "twitter:title", content: "ryse - reimagine your software experience" },
         {
             name: "twitter:description",
@@ -41,59 +37,55 @@ useHead({
     link: [{ rel: "canonical", href: "https://ryse.pages.dev/" }],
 });
 
-const videoRef = ref(null);
-
-const variants = {
-    hidden: { opacity: 0, y: 100 },
-    show: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            staggerChildren: 0.2,
-            duration: 0.6,
-            ease: "easeOut",
-        },
-    },
-};
+const isVisible = ref(false);
 
 onMounted(() => {
-    if (videoRef.value) {
-        videoRef.value.playbackRate = 0.9;
-    }
+    setTimeout(() => {
+        isVisible.value = true;
+    }, 100);
 });
 </script>
 
 <template>
-    <section class="relative w-full h-[90dvh] overflow-hidden flex items-center justify-center">
-        <video
-            ref="videoRef"
-            class="absolute top-0 left-0 w-full h-full object-cover"
-            muted
-            autoplay
-            loop
-            playsinline
-            @contextmenu.prevent
-            aria-label="Abstract mesh animation background"
-            preload="auto"
-        >
-            <source src="@/assets/mesh.webm#t=0.1" type="video/webm" />
-            Your browser does not support the video tag.
-        </video>
+    <section
+        class="relative h-screen w-screen flex flex-col justify-center items-center overflow-hidden bg-gray-900 text-white"
+    >
+        <GridBackground :enableGlow="true" />
 
-        <motion.div
-            initial="hidden"
-            animate="show"
-            :variants="variants"
-            class="relative z-10 flex flex-col w-full h-full items-center justify-center text-center px-4 md:px-8 lg:px-16"
-            style="max-width: 1200px; margin-left: auto; margin-right: auto"
+        <div
+            class="relative z-20 max-w-4xl mx-auto text-center px-6 transition-all duration-1000 ease-out"
+            :class="{
+                'opacity-100 translate-y-0': isVisible,
+                'opacity-0 translate-y-12': !isVisible,
+            }"
         >
-            <motion.h1 class="text-white text-6xl lg:text-7xl mb-2 font-bold" :variants="variants">
-                ryse
-            </motion.h1>
-            <motion.p class="text-white text-lg lg:text-xl" :variants="variants">
-                we build perfection
-            </motion.p>
-        </motion.div>
+            <h1
+                class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-emerald-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent leading-tight"
+            >
+                Oops! Sorry...
+            </h1>
+            <p class="text-xl md:text-2xl mb-4 text-slate-300 font-medium">
+                There are no projects to be displayed yet!
+            </p>
+            <p class="text-lg md:text-xl text-slate-400">
+                Come back later — maybe you'll be surprised to see one!
+            </p>
+
+            <div class="mt-8">
+                <router-link
+                    to="/"
+                    class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-semibold rounded-lg hover:from-emerald-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 focus:ring-offset-gray-900"
+                >
+                    ← Back to Home
+                </router-link>
+            </div>
+        </div>
+
+        <div
+            class="absolute top-1/4 right-1/4 w-64 h-64 bg-emerald-500/5 rounded-full blur-2xl"
+        ></div>
+        <div
+            class="absolute bottom-1/4 left-1/4 w-64 h-64 bg-cyan-500/5 rounded-full blur-2xl"
+        ></div>
     </section>
-    <RoutesIntroSection />
 </template>

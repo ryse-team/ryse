@@ -1,7 +1,7 @@
 <script setup>
 import { useRouter } from "vue-router";
-import MatrixRain from "../components/specific/MatrixRain.vue";
-import GlitchContent from "../components/specific/GlitchContent.vue";
+import MatrixRain from "@/components/pages/NotFound/MatrixRain.vue";
+import GlitchContent from "@/components/pages/NotFound/GlitchContent.vue";
 
 import { useGlitchEffect } from "../composables/useGlitchEffect";
 import { useErrorMessages } from "../composables/useErrorMessages";
