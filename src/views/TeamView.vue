@@ -1,7 +1,7 @@
 <script setup>
 import Card from "@/components/pages/TeamMemberCard.vue";
 import { useHead } from "@vueuse/head";
-import { founders, leadDevelopers, developers, alumni } from "@/data/team.js";
+import { founders, leadDevelopers, developers, alumni } from "@/data/teamData.js";
 
 useHead({
     title: "ryse Team - Meet Our Leaders & Developers | CIT Tech Team",
@@ -33,7 +33,7 @@ useHead({
 
 <template>
     <section
-        class="min-h-screen flex flex-col justify-center bg-black text-white relative py-[4rem] px-4"
+        class="min-h-screen flex flex-col justify-center bg-gradient-to-br from-gray-900 via-cyan-900/60 to-gray-900 text-white relative py-[4rem] px-4"
     >
         <img
             src="@/assets/topography.svg"

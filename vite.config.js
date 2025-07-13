@@ -15,12 +15,7 @@ export default defineConfig({
         host: true,
     },
     ssgOptions: {
-        routes: [
-            "/",
-            // '/about',
-            "/team",
-            "/projects",
-        ],
+        routes: ["/", "/about", "/team", "/projects"],
         script: "async",
         formatting: "prettify",
     },

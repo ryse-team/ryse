@@ -3,7 +3,7 @@ import { onMounted, ref } from "vue";
 import { motion } from "motion-v";
 import { useHead } from "@vueuse/head";
 
-import RoutesIntroSection from "@/components/pages/Home/RoutesIntroSection.vue";
+import RoutesIntroSection from "@/components/pages/home/RoutesIntroSection.vue";
 
 useHead({
     title: "ryse - reimagine your software experience | College Tech Team CIT",

@@ -5,6 +5,11 @@ export const routes = [
         component: () => import("@/views/HomeView.vue"),
     },
     {
+        path: "/about",
+        name: "About",
+        component: () => import("@/views/AboutView.vue"),
+    },
+    {
         path: "/team",
         name: "Team",
         component: () => import("@/views/TeamView.vue"),

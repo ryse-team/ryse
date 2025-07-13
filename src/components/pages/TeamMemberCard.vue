@@ -1,6 +1,5 @@
 <script setup>
 import { ref, onMounted } from "vue";
-import ArrowUpIcon from "@/assets/icons/ArrowUpIcon.vue";
 import LinkedInIcon from "@/assets/icons/LinkedInIcon.vue";
 import GitHubIcon from "@/assets/icons/GitHubIcon.vue";
 
@@ -145,7 +144,6 @@ onMounted(() => {
                 </a>
             </div>
 
-            <!-- Decorative elements -->
             <div
                 class="absolute -bottom-2 -right-2 w-20 h-20 bg-gradient-to-br from-emerald-500/10 to-cyan-500/10 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
             ></div>
@@ -154,7 +152,6 @@ onMounted(() => {
             ></div>
         </div>
 
-        <!-- Subtle border glow effect -->
         <div
             class="absolute inset-0 rounded-2xl bg-gradient-to-r from-emerald-500/20 via-cyan-500/20 to-emerald-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-sm"
         ></div>
@@ -162,14 +159,12 @@ onMounted(() => {
 </template>
 
 <style scoped>
-/* Custom shadow for enhanced depth */
 .shadow-3xl {
     box-shadow:
         0 35px 60px -12px rgba(0, 0, 0, 0.25),
         0 0 0 1px rgba(255, 255, 255, 0.05);
 }
 
-/* Smooth entrance animation */
 @keyframes slideUp {
     from {
         opacity: 0;

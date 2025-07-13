@@ -12,7 +12,9 @@ const handleHoverChange = (hovering) => {
 </script>
 
 <template>
-    <section class="relative w-full p-8 py-16 bg-gray-900 text-white overflow-hidden">
+    <section
+        class="relative w-full p-8 py-16 bg-gradient-to-br from-gray-900 via-cyan-900/50 to-gray-900 text-white overflow-hidden"
+    >
         <GridBackground :enableGlow="true" @hoverChange="handleHoverChange" />
 
         <div class="relative z-10">
