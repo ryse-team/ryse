@@ -41,7 +41,7 @@ onUnmounted(() => {
 
 <template>
     <nav
-        class="fixed top-2 left-1/2 -translate-x-1/2 z-[999] w-[95%] max-w-[1200px] transition-all duration-500"
+        class="fixed top-2 left-1/2 -translate-x-1/2 z-[999] w-[95%] max-w-[1200px] transition-all duration-500 rounded-b-3xl"
         aria-label="Main navigation"
     >
         <div
@@ -49,7 +49,6 @@ onUnmounted(() => {
                 'relative bg-black/40 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl',
                 'shadow-black/35 transition-all duration-500 ease-out',
                 'hover:bg-black/50 hover:border-white/20 hover:shadow-3xl',
-                isMobileMenuOpen ? 'rounded-b-none' : '',
             ]"
         >
             <div class="flex items-center justify-between px-4 sm:px-6 lg:px-12 py-3 lg:py-4">
@@ -183,11 +182,6 @@ onUnmounted(() => {
                 </div>
             </div>
         </div>
-
-        <div
-            v-if="isMobile && isMobileMenuOpen"
-            class="absolute top-full left-0 right-0 h-4 bg-gradient-to-b from-black/20 to-transparent backdrop-blur-sm rounded-b-2xl border-x border-b border-white/5 -z-10"
-        ></div>
     </nav>
 </template>
 

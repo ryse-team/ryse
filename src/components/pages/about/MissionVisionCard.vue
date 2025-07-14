@@ -45,7 +45,7 @@ const gradientClasses = `bg-gradient-to-r ${props.gradientColorFrom} ${props.gra
         ></div>
         <div
             :class="[
-                'relative bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 transition-all duration-300',
+                'relative bg-slate-800/50 backdrop-blur-sm border border-slate-700/50 rounded-2xl p-8 transition-all duration-300 h-full',
                 hoverBorderColor,
             ]"
         >

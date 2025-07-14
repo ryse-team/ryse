@@ -76,7 +76,7 @@ const lineClasses = computed(() => [
 </script>
 
 <template>
-    <div :class="titleAlignClass">
+    <div class="mb-4" :class="titleAlignClass">
         <component :is="titleTag" :class="titleClasses">{{ title }}</component>
         <div :class="lineClasses"></div>
         <p

@@ -1,32 +1,15 @@
 <script setup>
 import { ref, computed, onMounted } from "vue";
-import { useHead } from "@vueuse/head";
-import GridBackground from "@/components/layouts/GridBackground.vue";
+import { Search } from "lucide-vue-next";
 
-import { projects, projectsPageMeta } from "@/data/projectsData.js";
+import GridBackground from "@/components/layouts/GridBackground.vue";
+import { projects } from "@/data/projectsData.js";
 import ProjectCard from "@/components/pages/projects/ProjectCard.vue";
 import ProjectsFilterPanel from "@/components/pages/projects/ProjectsFilterPanel.vue";
-import SectionHeader from "@/components/shared/SectionHeader.vue"; // Your enhanced SectionHeader
+import SectionHeader from "@/components/shared/SectionHeader.vue";
+import { usePageHead, pageMeta } from "@/composables/usePageHead.js";
 
-import { Search, Users, Github } from "lucide-vue-next";
-
-useHead({
-    title: projectsPageMeta.title,
-    meta: [
-        { name: "description", content: projectsPageMeta.description },
-        { name: "keywords", content: projectsPageMeta.keywords },
-        { property: "og:title", content: projectsPageMeta.ogTitle },
-        { property: "og:description", content: projectsPageMeta.ogDescription },
-        { property: "og:image", content: projectsPageMeta.ogImage },
-        { property: "og:url", content: projectsPageMeta.ogUrl },
-        { property: "og:type", content: projectsPageMeta.ogType },
-        { name: "twitter:card", content: projectsPageMeta.twitterCard },
-        { name: "twitter:title", content: projectsPageMeta.twitterTitle },
-        { name: "twitter:description", content: projectsPageMeta.twitterDescription },
-        { name: "twitter:image", content: projectsPageMeta.twitterImage },
-    ],
-    link: [{ rel: "canonical", href: projectsPageMeta.canonicalUrl }],
-});
+usePageHead(pageMeta.projects);
 
 const isVisible = ref(false);
 const isLoading = ref(true);
@@ -111,7 +94,7 @@ const handleClearFilters = () => {
         >
             <SectionHeader
                 title="Our Projects"
-                description="Discover the innovative solutions built by our talented student developers. From web applications to AI systems, explore our journey of learning and creating."
+                description="Discover the innovative solutions built by our talented student developers."
                 titleTag="h1"
                 :titleTextGradient="true"
                 titleGradientClasses="from-emerald-400 via-cyan-400 to-emerald-400"
@@ -163,40 +146,6 @@ const handleClearFilters = () => {
                 <p class="text-gray-400 mb-6">
                     Try adjusting your search terms or filters to find what you're looking for.
                 </p>
-                <button
-                    @click="handleClearFilters"
-                    class="px-6 py-2 bg-cyan-600/20 text-cyan-400 rounded-lg hover:bg-cyan-600/30 transition-colors"
-                >
-                    Clear all filters
-                </button>
-            </div>
-
-            <div
-                v-if="!isLoading && filteredProjects.length > 0"
-                class="text-center mt-16 p-8 bg-slate-800/20 backdrop-blur-sm border border-slate-700/30 rounded-xl"
-            >
-                <h3 class="text-2xl font-bold text-white mb-4">Want to contribute?</h3>
-                <p class="text-gray-400 mb-6 max-w-2xl mx-auto">
-                    Join our community of student developers! Whether you're a beginner or
-                    experienced, there's a place for you in our projects.
-                </p>
-                <div class="flex flex-wrap justify-center gap-4">
-                    <a
-                        href="https://github.com/rysetech"
-                        target="_blank"
-                        class="inline-flex items-center px-6 py-3 bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-medium rounded-lg hover:from-emerald-600 hover:to-cyan-600 transition-all duration-300"
-                    >
-                        <Github class="w-5 h-5 mr-2" />
-                        View on GitHub
-                    </a>
-                    <a
-                        href="/join"
-                        class="inline-flex items-center px-6 py-3 bg-slate-700/50 text-gray-300 font-medium rounded-lg hover:bg-slate-600/50 hover:text-white transition-all duration-300"
-                    >
-                        <Users class="w-5 h-5 mr-2" />
-                        Join the Team
-                    </a>
-                </div>
             </div>
         </div>
 

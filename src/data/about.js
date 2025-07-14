@@ -5,23 +5,23 @@ import {
     Code,
     Trophy,
     Heart,
-    Github,
-    Linkedin,
-    Instagram,
     Sparkles,
     Rocket,
     Globe,
 } from "lucide-vue-next";
+import GitHubIcon from "@/assets/icons/GitHubIcon.vue";
+import LinkedInIcon from "@/assets/icons/LinkedInIcon.vue";
+import InstagramIcon from "@/assets/icons/InstagramIcon.vue";
 
 export const aboutPageData = {
     hero: {
         title: "Who We Are",
         paragraphs: [
             {
-                textHtml: `We are <span class="text-cyan-300 font-semibold">ryse</span>, Coimbatore Institute of Technology's premier student-led tech team, dedicated to reimagining software experience through innovation and collaboration. Born from a shared passion for technology, ryse is a collective of students across Computer Science, IT, and ECE disciplines at CIT, pushing the boundaries of what's possible.`,
+                textHtml: `We are <span class="text-cyan-300 font-semibold">ryse</span>, <a target="_blank" href="https://www.cit.edu.in/" class="text-yellow-300 semibold underline">Coimbatore Institute of Technology's</a> premier student-led tech team, dedicated to reimagining software experience through innovation and collaboration. Born from a shared passion for technology, ryse is a collective of students across our college, pushing the boundaries of what's possible.`,
             },
             {
-                textHtml: `Founded in <span class="text-cyan-300 font-semibold">2020</span> by a group of ambitious students, ryse emerged from a desire to create a practical, hands-on learning environment beyond traditional academics. Our journey began with <span class="text-cyan-300 font-semibold">a hackathon</span>.`,
+                textHtml: `Founded in <span class="text-cyan-300 font-semibold">2025</span> by a group of ambitious students, ryse emerged from a desire to create a practical, hands-on learning and collaborative environment beyond traditional academics in our college.`,
             },
         ],
         sparkleIcon: Sparkles,
@@ -35,7 +35,7 @@ export const aboutPageData = {
             icon: Target,
             title: "Our Mission",
             description:
-                "Our mission is to cultivate a dynamic tech ecosystem within CIT, empowering students to transform theoretical knowledge into real-world applications, foster a culture of continuous learning, and build impactful solutions.",
+                "Our mission is to cultivate a dynamic tech ecosystem within CIT, empowering students to transform theoretical knowledge into real-world applications, foster a culture of continuous learning and build impactful solutions.",
             gradientFrom: "from-cyan-500/20",
             gradientTo: "to-blue-500/20",
             hoverBorder: "hover:border-cyan-500/30",
@@ -64,7 +64,7 @@ export const aboutPageData = {
                 iconColor: "text-cyan-300",
                 title: "Skill Development",
                 description:
-                    "Interactive workshops and intensive bootcamps on Web/Mobile Development, UI/UX Design, Cloud, DevOps, and more.",
+                    "Interactive talks and discussions on technologies in Web/Mobile Development, UI/UX Design, Cloud, DevOps, and more.",
                 hoverBorderColor: "border-cyan-500/30",
             },
             {
@@ -75,15 +75,6 @@ export const aboutPageData = {
                 description:
                     "Building real-world solutions, tackling campus challenges and contributing to open source projects.",
                 hoverBorderColor: "border-amber-500/30",
-            },
-            {
-                icon: Trophy,
-                iconBgGradient: "from-yellow-500/20 to-amber-500/20",
-                iconColor: "text-yellow-400",
-                title: "Competitions",
-                description:
-                    "Organizing and participating in internal and external hackathons, fostering collaborative yet competitive spirit.",
-                hoverBorderColor: "border-yellow-500/30",
             },
             {
                 icon: Users,
@@ -147,41 +138,30 @@ export const aboutPageData = {
             },
         ],
         closingText:
-            "Our culture is one of mutual support and experimentation — think late-night coding sessions with chai, brainstorming marathons, and friendships that go beyond screens.",
+            "Our culture is one of mutual support and experimentation — think late-night caffeine-induced coding sessions, brainstorming marathons, and friendships that go beyond screens.",
     },
     callToAction: {
         title: "Ready to Join the Revolution?",
         description:
-            "Are you a CIT student with a passion for tech? Join the ryse family! Whether you're a beginner or a seasoned coder, there's a place for you here.",
-        primaryButton: {
-            text: "Get Involved",
-            link: "/contact",
-        },
-        secondaryButton: {
-            text: "Contact Us",
-            link: "/contact",
-        },
-        infoText:
-            "Interested in collaborating, mentoring, or sponsoring us? We'd love to hear from you.",
+            "Interested in collaborating, mentoring, or sponsoring us? We'd love to hear from you in any of our social media platforms while you follow our journey.",
     },
     socialMedia: {
-        header: "Follow Our Journey",
         links: [
             {
-                href: "https://github.com/rysetech",
-                icon: Github,
+                href: "https://github.com/ryse-team",
+                icon: GitHubIcon,
                 hoverBorder: "hover:border-cyan-500/50",
                 hoverIcon: "group-hover:text-cyan-300",
             },
             {
-                href: "https://linkedin.com/company/ryse-tech",
-                icon: Linkedin,
+                href: "https://linkedin.com/company/ryse-team",
+                icon: LinkedInIcon,
                 hoverBorder: "hover:border-blue-500/50",
                 hoverIcon: "group-hover:text-blue-400",
             },
             {
-                href: "https://instagram.com/rysetech",
-                icon: Instagram,
+                href: "https://instagram.com/ryseteam",
+                icon: InstagramIcon,
                 hoverBorder: "hover:border-pink-500/50",
                 hoverIcon: "group-hover:text-pink-400",
             },

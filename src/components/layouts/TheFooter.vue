@@ -1,5 +1,5 @@
 <script setup>
-import ArrowUp from "@/assets/icons/ArrowUpIcon.vue";
+import ArrowUpIcon from "@/assets/icons/ArrowUpIcon.vue";
 import LinkedInIcon from "@/assets/icons/LinkedInIcon.vue";
 import GitHubIcon from "@/assets/icons/GitHubIcon.vue";
 </script>
@@ -29,7 +29,7 @@ import GitHubIcon from "@/assets/icons/GitHubIcon.vue";
 
             <div class="flex flex-col space-y-4">
                 <div class="flex gap-2 items-center group justify-start md:justify-end">
-                    <ArrowUp
+                    <ArrowUpIcon
                         class="fill-white w-4 h-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                         aria-hidden="true"
                     />

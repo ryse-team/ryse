@@ -1,34 +1,10 @@
 <script setup>
-import Card from "@/components/pages/TeamMemberCard.vue";
-import { useHead } from "@vueuse/head";
+import Card from "@/components/pages/team/TeamMemberCard.vue";
 import { founders, leadDevelopers, developers, alumni } from "@/data/teamData.js";
 
-useHead({
-    title: "ryse Team - Meet Our Leaders & Developers | CIT Tech Team",
-    meta: [
-        {
-            name: "description",
-            content:
-                "Meet the talented college students and founders behind ryse tech team from Coimbatore Institute of Technology (CIT). Learn about our Founders, Lead Developers, their roles, and contributions to our innovative software projects.",
-        },
-        { property: "og:title", content: "ryse Team - Meet Our Leaders & Developers" },
-        {
-            property: "og:description",
-            content:
-                "Meet the talented college students and founders behind ryse tech team from Coimbatore Institute of Technology (CIT). Learn about our Founders, Lead Developers, their roles, and contributions to our innovative software projects.",
-        },
-        { property: "og:image", content: "https://ryse.pages.dev/images/ryse.jpg" },
-        { property: "og:url", content: "https://ryse.pages.dev/team" },
-        { name: "twitter:card", content: "summary_large_image" },
-        { name: "twitter:title", content: "ryse Team - Meet Our Leader & Developers" },
-        {
-            name: "twitter:description",
-            content: "Meet the talented college students and founders behind ryse from CIT.",
-        },
-        { name: "twitter:image", content: "https://ryse.pages.dev/images/ryse.jpg" },
-    ],
-    link: [{ rel: "canonical", href: "https://ryse.pages.dev/team" }],
-});
+import { usePageHead, pageMeta } from "@/composables/usePageHead.js"; //
+
+usePageHead(pageMeta.team); //
 </script>
 
 <template>

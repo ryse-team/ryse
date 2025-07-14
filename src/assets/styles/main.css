@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-/* Font Definition */
 @font-face {
     font-family: "Scientifica";
     src: url("../fonts/scientifica.woff2") format("woff2");
@@ -9,7 +8,6 @@
     font-display: swap;
 }
 
-/* Tailwind Utilities */
 @layer utilities {
     .font-stf {
         font-family: "Scientifica", sans-serif;

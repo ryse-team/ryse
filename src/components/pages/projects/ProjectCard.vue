@@ -1,5 +1,6 @@
 <script setup>
-import { Users, Calendar, Github, Globe, GitBranch } from "lucide-vue-next";
+import { Users, Calendar, Globe, GitBranch } from "lucide-vue-next";
+import GitHubIcon from "@/assets/icons/GitHubIcon.vue";
 import { getStatusColor, getDifficultyColor, formatDate } from "@/data/projectsData.js";
 
 const props = defineProps({
@@ -97,7 +98,7 @@ const props = defineProps({
                             v-else
                             class="px-2 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full font-medium"
                         >
-                            Closed
+                            Closed to contributions
                         </span>
                     </div>
                 </div>
@@ -109,7 +110,7 @@ const props = defineProps({
                         rel="noopener noreferrer"
                         class="flex-1 inline-flex items-center justify-center px-3 py-2 bg-slate-700/50 text-gray-300 text-sm rounded-lg hover:bg-slate-600/50 hover:text-white transition-all duration-200"
                     >
-                        <Github class="w-4 h-4 mr-2" />
+                        <GitHubIcon class="w-4 h-4 mr-2" />
                         Code
                     </a>
                     <a

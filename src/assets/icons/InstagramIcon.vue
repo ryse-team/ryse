@@ -1,8 +1,27 @@
+<script setup>
+const props = defineProps({
+    width: {
+        type: [String, Number],
+        default: 24,
+    },
+    height: {
+        type: [String, Number],
+        default: 24,
+    },
+    color: {
+        type: String,
+        default: "currentColor",
+    },
+});
+</script>
+
 <template>
     <svg
         xmlns="http://www.w3.org/2000/svg"
+        :width="width"
+        :height="height"
         viewBox="0 0 24 24"
-        fill="currentColor"
+        :fill="color"
         class="w-6 h-6"
         aria-label="Instagram"
     >

@@ -8,7 +8,6 @@ export function useGlitchEffect() {
         layer3: { x: 0, y: 0, clipTop: 0, clipBottom: 100 },
     });
 
-    // computed styles for glitch layers
     const glitchLayersStyles = computed(() => [
         {
             transform: `translate(${glitchData.value.layer1.x}px, ${glitchData.value.layer1.y}px)`,
@@ -46,7 +45,6 @@ export function useGlitchEffect() {
             currentY += stripHeight + Math.random() * 10;
         }
 
-        // reset glitch data for all layers before assigning new strips
         glitchData.value.layer1 = { x: 0, y: 0, clipTop: 0, clipBottom: 100 };
         glitchData.value.layer2 = { x: 0, y: 0, clipTop: 0, clipBottom: 100 };
         glitchData.value.layer3 = { x: 0, y: 0, clipTop: 0, clipBottom: 100 };
@@ -80,7 +78,6 @@ export function useGlitchEffect() {
     }
 
     function startGlitchSystem() {
-        // Initial glitch after exactly 500ms
         setTimeout(() => {
             triggerGlitch();
         }, 500);

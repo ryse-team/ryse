@@ -1,18 +1,15 @@
 <script setup>
 import { ref, onMounted } from "vue";
-import { useHead } from "@vueuse/head";
 import { ArrowRight } from "lucide-vue-next";
 
 import { aboutPageData } from "@/data/about.js";
-
 import GridBackground from "@/components/layouts/GridBackground.vue";
-
 import SectionHeader from "@/components/shared/SectionHeader.vue";
 import SocialLinkButton from "@/components/shared/SocialLinkButton.vue";
-
 import MissionVisionCard from "@/components/pages/about/MissionVisionCard.vue";
 import FeatureCard from "@/components/pages/about/FeatureCard.vue";
 import ValueItem from "@/components/pages/about/ValueItem.vue";
+import { usePageHead, pageMeta } from "@/composables/usePageHead.js";
 
 const isVisible = ref(false);
 
@@ -22,16 +19,7 @@ onMounted(() => {
     }, 300);
 });
 
-useHead({
-    title: "About | ryse - College Tech Team CIT",
-    meta: [
-        {
-            name: "description",
-            content:
-                "Learn more about ryse – CIT's premier student-led tech team focused on software innovation, collaboration, and community impact.",
-        },
-    ],
-});
+usePageHead(pageMeta.about);
 </script>
 
 <template>
@@ -96,7 +84,7 @@ useHead({
                         :title="aboutPageData.whatWeDo.header.title"
                         :line-gradient="aboutPageData.whatWeDo.header.lineGradient"
                     />
-                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
                         <FeatureCard
                             v-for="(card, index) in aboutPageData.whatWeDo.cards"
                             :key="index"
@@ -120,7 +108,7 @@ useHead({
                             :title="aboutPageData.valuesCulture.header.title"
                             :description="aboutPageData.valuesCulture.header.description"
                         />
-                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 mt-6">
                             <ValueItem
                                 v-for="(item, index) in aboutPageData.valuesCulture.items"
                                 :key="index"
@@ -159,43 +147,17 @@ useHead({
                             >
                                 {{ aboutPageData.callToAction.description }}
                             </p>
-                            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                                <a
-                                    :href="aboutPageData.callToAction.primaryButton.link"
-                                    class="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-emerald-500 text-white px-8 py-3 rounded-xl font-semibold hover:from-cyan-600 hover:to-emerald-600 transition-all duration-300 transform hover:scale-105"
-                                >
-                                    {{ aboutPageData.callToAction.primaryButton.text }}
-                                    <ArrowRight class="w-4 h-4" />
-                                </a>
-                                <a
-                                    :href="aboutPageData.callToAction.secondaryButton.link"
-                                    class="inline-flex items-center gap-2 border border-slate-600 text-white px-8 py-3 rounded-xl font-semibold hover:border-cyan-500 hover:text-cyan-300 transition-all duration-300"
-                                >
-                                    {{ aboutPageData.callToAction.secondaryButton.text }}
-                                </a>
+                            <div class="flex justify-center gap-6">
+                                <SocialLinkButton
+                                    v-for="(link, index) in aboutPageData.socialMedia.links"
+                                    :key="index"
+                                    :href="link.href"
+                                    :icon="link.icon"
+                                    :hover-border-color="link.hoverBorder"
+                                    :hover-icon-color="link.hoverIcon"
+                                />
                             </div>
-                            <p class="text-gray-400 mb-6 font-mono">
-                                {{ aboutPageData.callToAction.infoText }}
-                            </p>
                         </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="relative max-w-7xl mx-auto px-6 md:px-12 lg:px-24 py-16">
-                <div class="text-center">
-                    <h3 class="text-3xl font-bold text-white mb-8">
-                        {{ aboutPageData.socialMedia.header }}
-                    </h3>
-                    <div class="flex justify-center gap-6">
-                        <SocialLinkButton
-                            v-for="(link, index) in aboutPageData.socialMedia.links"
-                            :key="index"
-                            :href="link.href"
-                            :icon="link.icon"
-                            :hover-border-color="link.hoverBorder"
-                            :hover-icon-color="link.hoverIcon"
-                        />
                     </div>
                 </div>
             </section>

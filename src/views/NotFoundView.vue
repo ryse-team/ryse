@@ -3,8 +3,8 @@ import { useRouter } from "vue-router";
 import MatrixRain from "@/components/pages/not-found/MatrixRain.vue";
 import GlitchContent from "@/components/pages/not-found/GlitchContent.vue";
 
-import { useGlitchEffect } from "../composables/useGlitchEffect";
-import { useErrorMessages } from "../composables/useErrorMessages";
+import { useGlitchEffect } from "@/composables/useGlitchEffect";
+import { useErrorMessages } from "@/composables/useErrorMessages";
 
 const router = useRouter();
 

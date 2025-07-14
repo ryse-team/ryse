@@ -110,128 +110,130 @@ const activeFilterCount = computed(() => {
             </button>
         </div>
 
-        <div
-            v-if="showFilters"
-            class="bg-slate-800/30 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6 transition-all duration-300"
-        >
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                    <h3 class="text-white font-medium mb-3">Project Status</h3>
-                    <div class="space-y-2">
-                        <label class="flex items-center cursor-pointer">
-                            <input
-                                type="radio"
-                                value="all"
-                                :checked="selectedStatusInternal === 'all'"
-                                @change="updateSelectedStatus('all')"
-                                class="sr-only"
-                            />
-                            <div
-                                class="w-4 h-4 rounded-full border-2 border-gray-400 mr-3 flex items-center justify-center"
-                            >
+        <Transition name="slide-down-fx">
+            <div
+                v-show="showFilters"
+                class="bg-slate-800/30 backdrop-blur-sm border border-slate-700/50 rounded-xl p-6"
+            >
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="text-white font-medium mb-3">Project Status</h3>
+                        <div class="space-y-2">
+                            <label class="flex items-center cursor-pointer">
+                                <input
+                                    type="radio"
+                                    value="all"
+                                    :checked="selectedStatusInternal === 'all'"
+                                    @change="updateSelectedStatus('all')"
+                                    class="sr-only"
+                                />
                                 <div
-                                    v-if="selectedStatusInternal === 'all'"
-                                    class="w-2 h-2 bg-cyan-400 rounded-full"
-                                ></div>
-                            </div>
-                            <span class="text-gray-300">All Projects</span>
-                        </label>
-                        <label class="flex items-center cursor-pointer">
-                            <input
-                                type="radio"
-                                value="completed"
-                                :checked="selectedStatusInternal === 'completed'"
-                                @change="updateSelectedStatus('completed')"
-                                class="sr-only"
-                            />
-                            <div
-                                class="w-4 h-4 rounded-full border-2 border-gray-400 mr-3 flex items-center justify-center"
-                            >
+                                    class="w-4 h-4 rounded-full border-2 border-gray-400 mr-3 flex items-center justify-center"
+                                >
+                                    <div
+                                        v-if="selectedStatusInternal === 'all'"
+                                        class="w-2 h-2 bg-cyan-400 rounded-full"
+                                    ></div>
+                                </div>
+                                <span class="text-gray-300">All Projects</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input
+                                    type="radio"
+                                    value="completed"
+                                    :checked="selectedStatusInternal === 'completed'"
+                                    @change="updateSelectedStatus('completed')"
+                                    class="sr-only"
+                                />
                                 <div
-                                    v-if="selectedStatusInternal === 'completed'"
-                                    class="w-2 h-2 bg-emerald-400 rounded-full"
-                                ></div>
-                            </div>
-                            <span class="text-gray-300">Completed</span>
-                        </label>
-                        <label class="flex items-center cursor-pointer">
-                            <input
-                                type="radio"
-                                value="in-progress"
-                                :checked="selectedStatusInternal === 'in-progress'"
-                                @change="updateSelectedStatus('in-progress')"
-                                class="sr-only"
-                            />
-                            <div
-                                class="w-4 h-4 rounded-full border-2 border-gray-400 mr-3 flex items-center justify-center"
-                            >
+                                    class="w-4 h-4 rounded-full border-2 border-gray-400 mr-3 flex items-center justify-center"
+                                >
+                                    <div
+                                        v-if="selectedStatusInternal === 'completed'"
+                                        class="w-2 h-2 bg-emerald-400 rounded-full"
+                                    ></div>
+                                </div>
+                                <span class="text-gray-300">Completed</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input
+                                    type="radio"
+                                    value="in-progress"
+                                    :checked="selectedStatusInternal === 'in-progress'"
+                                    @change="updateSelectedStatus('in-progress')"
+                                    class="sr-only"
+                                />
                                 <div
-                                    v-if="selectedStatusInternal === 'in-progress'"
-                                    class="w-2 h-2 bg-amber-400 rounded-full"
-                                ></div>
-                            </div>
-                            <span class="text-gray-300">In Progress</span>
-                        </label>
-                        <label class="flex items-center cursor-pointer">
-                            <input
-                                type="radio"
-                                value="concept"
-                                :checked="selectedStatusInternal === 'concept'"
-                                @change="updateSelectedStatus('concept')"
-                                class="sr-only"
-                            />
-                            <div
-                                class="w-4 h-4 rounded-full border-2 border-gray-400 mr-3 flex items-center justify-center"
-                            >
+                                    class="w-4 h-4 rounded-full border-2 border-gray-400 mr-3 flex items-center justify-center"
+                                >
+                                    <div
+                                        v-if="selectedStatusInternal === 'in-progress'"
+                                        class="w-2 h-2 bg-amber-400 rounded-full"
+                                    ></div>
+                                </div>
+                                <span class="text-gray-300">In Progress</span>
+                            </label>
+                            <label class="flex items-center cursor-pointer">
+                                <input
+                                    type="radio"
+                                    value="concept"
+                                    :checked="selectedStatusInternal === 'concept'"
+                                    @change="updateSelectedStatus('concept')"
+                                    class="sr-only"
+                                />
                                 <div
-                                    v-if="selectedStatusInternal === 'concept'"
-                                    class="w-2 h-2 bg-blue-400 rounded-full"
-                                ></div>
-                            </div>
-                            <span class="text-gray-300">Concept</span>
-                        </label>
+                                    class="w-4 h-4 rounded-full border-2 border-gray-400 mr-3 flex items-center justify-center"
+                                >
+                                    <div
+                                        v-if="selectedStatusInternal === 'concept'"
+                                        class="w-2 h-2 bg-blue-400 rounded-full"
+                                    ></div>
+                                </div>
+                                <span class="text-gray-300">Concept</span>
+                            </label>
+                        </div>
                     </div>
-                </div>
 
-                <div>
-                    <h3 class="text-white font-medium mb-3">Technologies</h3>
-                    <div class="flex flex-wrap gap-2 max-h-32 overflow-y-auto">
-                        <button
-                            v-for="tag in allTags"
-                            :key="tag"
-                            @click="toggleTagFilter(tag)"
-                            class="px-3 py-1 text-xs rounded-full border transition-all duration-200"
-                            :class="
-                                selectedTagsInternal.includes(tag)
-                                    ? 'bg-cyan-500 text-white border-cyan-500'
-                                    : 'bg-slate-700/50 text-gray-300 border-slate-600 hover:border-cyan-500/50'
-                            "
-                        >
-                            {{ tag }}
-                        </button>
+                    <div>
+                        <h3 class="text-white font-medium mb-3">Technologies</h3>
+                        <div class="flex flex-wrap gap-2 max-h-32 overflow-y-auto">
+                            <button
+                                v-for="tag in allTags"
+                                :key="tag"
+                                @click="toggleTagFilter(tag)"
+                                class="px-3 py-1 text-xs rounded-full border transition-all duration-200"
+                                :class="
+                                    selectedTagsInternal.includes(tag)
+                                        ? 'bg-cyan-500 text-white border-cyan-500'
+                                        : 'bg-slate-700/50 text-gray-300 border-slate-600 hover:border-cyan-500/50'
+                                "
+                            >
+                                {{ tag }}
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </Transition>
     </div>
 </template>
 
 <style scoped>
-.overflow-y-auto::-webkit-scrollbar {
-    width: 4px;
+.slide-down-fx-enter-active,
+.slide-down-fx-leave-active {
+    transition: all 0.3s ease;
+    transform-origin: top;
 }
 
-.overflow-y-auto::-webkit-scrollbar-track {
-    background: rgba(51, 65, 85, 0.3);
-    border-radius: 2px;
+.slide-down-fx-enter-from,
+.slide-down-fx-leave-to {
+    opacity: 0;
+    transform: scaleY(0);
 }
 
-.overflow-y-auto::-webkit-scrollbar-thumb {
-    background: rgba(6, 182, 212, 0.5);
-    border-radius: 2px;
-}
-
-.overflow-y-auto::-webkit-scrollbar-thumb:hover {
-    background: rgba(6, 182, 212, 0.7);
+.slide-down-fx-enter-to,
+.slide-down-fx-leave-from {
+    opacity: 1;
+    transform: scaleY(1);
 }
 </style>

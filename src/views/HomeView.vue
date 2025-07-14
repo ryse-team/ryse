@@ -1,45 +1,11 @@
 <script setup>
 import { onMounted, ref } from "vue";
 import { motion } from "motion-v";
-import { useHead } from "@vueuse/head";
 
 import RoutesIntroSection from "@/components/pages/home/RoutesIntroSection.vue";
+import { usePageHead, pageMeta } from "@/composables/usePageHead.js";
 
-useHead({
-    title: "ryse - reimagine your software experience | College Tech Team CIT",
-    meta: [
-        {
-            name: "description",
-            content:
-                "ryse is a college student tech team for Coimbatore Institute of Technology (CIT) focused on creating innovative software solutions with industrial standards. Learn about our team, projects, and mission.",
-        },
-        {
-            name: "keywords",
-            content:
-                "ryse, reimagine your software experience, college tech team, coimbatore institute of technology, cit, software development, web development, innovative solutions, student projects, industrial standards, community, collaboration",
-        },
-        { property: "og:title", content: "ryse - reimagine your software experience" },
-        {
-            property: "og:description",
-            content:
-                "ryse is a college student tech team for Coimbatore Institute of Technology (CIT) focused on creating innovative software solutions with industrial standards. Learn about our team, projects, and mission.",
-        },
-        { property: "og:image", content: "https://ryse.pages.dev/images/ryse.jpg" },
-        { property: "og:url", content: "https://ryse.pages.dev/" },
-        { property: "og:type", content: "website" },
-
-        { name: "twitter:card", content: "summary_large_image" },
-        // { name: 'twitter:site', content: '@YourTwitterHandle' },
-        { name: "twitter:title", content: "ryse - reimagine your software experience" },
-        {
-            name: "twitter:description",
-            content:
-                "ryse is a college student tech team for Coimbatore Institute of Technology (CIT) focused on creating innovative software solutions with industrial standards. Learn about our team, projects, and mission.",
-        },
-        { name: "twitter:image", content: "https://ryse.pages.dev/images/ryse.jpg" },
-    ],
-    link: [{ rel: "canonical", href: "https://ryse.pages.dev/" }],
-});
+usePageHead(pageMeta.about);
 
 const videoRef = ref(null);
 

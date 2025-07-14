@@ -67,7 +67,6 @@ defineExpose({
 
 <template>
     <div ref="containerRef" class="absolute inset-0 w-full h-full pointer-events-none">
-        <!-- Base grid with increased opacity -->
         <div class="absolute inset-0 opacity-50">
             <div
                 class="w-full h-full"
@@ -80,7 +79,6 @@ defineExpose({
             ></div>
         </div>
 
-        <!-- Dot pattern overlay with increased opacity -->
         <div class="absolute inset-0 opacity-35">
             <div
                 class="w-full h-full"
@@ -95,17 +93,16 @@ defineExpose({
             ></div>
         </div>
 
-        <!-- Glow effect layers with reduced intensity -->
         <div
             v-if="props.enableGlow"
             class="absolute inset-0 transition-opacity duration-300"
             :class="{ 'opacity-100': isHovering, 'opacity-0': !isHovering }"
             :style="{
                 background: `radial-gradient(600px circle at ${mouseX}px ${mouseY}px,
-          rgba(16, 185, 129, 0.12) 0%,
-          rgba(6, 182, 212, 0.08) 25%,
-          rgba(16, 185, 129, 0.04) 50%,
-          transparent 70%)`,
+                rgba(16, 185, 129, 0.12) 0%,
+                rgba(6, 182, 212, 0.08) 25%,
+                rgba(16, 185, 129, 0.04) 50%,
+                transparent 70%)`,
             }"
         ></div>
 
@@ -115,9 +112,9 @@ defineExpose({
             :class="{ 'opacity-100': isHovering, 'opacity-0': !isHovering }"
             :style="{
                 background: `radial-gradient(300px circle at ${mouseX}px ${mouseY}px,
-          rgba(16, 185, 129, 0.06) 0%,
-          rgba(6, 182, 212, 0.03) 40%,
-          transparent 70%)`,
+                rgba(16, 185, 129, 0.06) 0%,
+                rgba(6, 182, 212, 0.03) 40%,
+                transparent 70%)`,
             }"
         ></div>
 
@@ -127,22 +124,22 @@ defineExpose({
             :class="{ 'opacity-100': isHovering, 'opacity-0': !isHovering }"
             :style="{
                 background: `radial-gradient(400px circle at ${mouseX}px ${mouseY}px,
-          transparent 0%,
-          transparent 30%,
-          rgba(16, 185, 129, 0.05) 40%,
-          transparent 70%)`,
+                transparent 0%,
+                transparent 30%,
+                rgba(16, 185, 129, 0.05) 40%,
+                transparent 70%)`,
                 backgroundImage: `
-          linear-gradient(rgba(16, 185, 129, 0.2) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(16, 185, 129, 0.2) 1px, transparent 1px)`,
+                linear-gradient(rgba(16, 185, 129, 0.2) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(16, 185, 129, 0.2) 1px, transparent 1px)`,
                 backgroundSize: '50px 50px',
                 maskImage: `radial-gradient(400px circle at ${mouseX}px ${mouseY}px,
-          black 0%,
-          black 30%,
-          transparent 70%)`,
+                black 0%,
+                black 30%,
+                transparent 70%)`,
                 WebkitMaskImage: `radial-gradient(400px circle at ${mouseX}px ${mouseY}px,
-          black 0%,
-          black 30%,
-          transparent 70%)`,
+                black 0%,
+                black 30%,
+                transparent 70%)`,
             }"
         ></div>
     </div>
