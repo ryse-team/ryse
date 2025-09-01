@@ -6,9 +6,9 @@ import GitHubIcon from "@/assets/icons/GitHubIcon.vue";
 
 <template>
     <footer
-        class="w-full bg-black text-sm lg:text-base px-4 sm:px-8 lg:px-32 py-12 flex flex-col gap-8"
+        class="flex flex-col w-full bg-black text-sm lg:text-base px-4 sm:px-8 lg:px-32 py-12 gap-8"
     >
-        <div class="w-full flex flex-col md:flex-row md:justify-between md:items-start gap-8">
+        <div class="w-full flex justify-between">
             <nav aria-label="Footer navigation">
                 <ul class="space-y-2">
                     <li>
@@ -24,15 +24,19 @@ import GitHubIcon from "@/assets/icons/GitHubIcon.vue";
                             Team
                         </RouterLink>
                     </li>
+                    <li>
+                        <RouterLink
+                            to="/about"
+                            class="hover:underline text-gray-400 hover:text-white"
+                        >
+                            About
+                        </RouterLink>
+                    </li>
                 </ul>
             </nav>
 
-            <div class="flex flex-col space-y-4">
+            <div class="flex flex-col items-start space-y-4">
                 <div class="flex gap-2 items-center group justify-start md:justify-end">
-                    <ArrowUpIcon
-                        class="fill-white w-4 h-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
-                        aria-hidden="true"
-                    />
                     <a
                         href="https://github.com/ryse-team"
                         target="_blank"
@@ -45,13 +49,13 @@ import GitHubIcon from "@/assets/icons/GitHubIcon.vue";
                         />
                         <span>GitHub</span>
                     </a>
-                </div>
-
-                <div class="flex gap-2 items-center group justify-start md:justify-end">
-                    <ArrowUp
+                     <ArrowUpIcon
                         class="fill-white w-4 h-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                         aria-hidden="true"
                     />
+                </div>
+
+                <div class="flex gap-2 items-center group justify-start md:justify-end">
                     <a
                         href="https://www.linkedin.com/company/ryse-cit/"
                         target="_blank"
@@ -64,6 +68,10 @@ import GitHubIcon from "@/assets/icons/GitHubIcon.vue";
                         />
                         <span>LinkedIn</span>
                     </a>
+                    <ArrowUpIcon
+                        class="fill-white w-4 h-4 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                        aria-hidden="true"
+                    />
                 </div>
             </div>
         </div>

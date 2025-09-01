@@ -1,6 +1,5 @@
 <script setup>
 import { ref, onMounted } from "vue";
-import { ArrowRight } from "lucide-vue-next";
 
 import { aboutPageData } from "@/data/about.js";
 import GridBackground from "@/components/layouts/GridBackground.vue";

@@ -2,6 +2,7 @@
 import { ref, onMounted } from "vue";
 import LinkedInIcon from "@/assets/icons/LinkedInIcon.vue";
 import GitHubIcon from "@/assets/icons/GitHubIcon.vue";
+import ArrowUpIcon from "@/assets/icons/ArrowUpIcon.vue";
 
 const props = defineProps({
     name: {
@@ -121,7 +122,7 @@ onMounted(() => {
                         class="w-4 h-4 transition-transform duration-300 group-hover/link:scale-110"
                     />
                     <span class="text-sm font-medium">LinkedIn</span>
-                    <ExternalLink
+                    <ArrowUpIcon
                         class="w-3 h-3 opacity-0 group-hover/link:opacity-100 transition-opacity duration-300"
                     />
                 </a>
@@ -138,7 +139,7 @@ onMounted(() => {
                         class="w-4 h-4 transition-transform duration-300 group-hover/link:scale-110"
                     />
                     <span class="text-sm font-medium">GitHub</span>
-                    <ExternalLink
+                    <ArrowUpIcon
                         class="w-3 h-3 opacity-0 group-hover/link:opacity-100 transition-opacity duration-300"
                     />
                 </a>

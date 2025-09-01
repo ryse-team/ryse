@@ -65,7 +65,7 @@ const props = defineProps({
                 ></div>
 
                 <p
-                    class="text-lg md:text-xl text-slate-300 leading-relaxed font-medium group-hover:text-slate-200 transition-colors duration-300 max-w-2xl"
+                    class="text-[1.3rem] text-slate-300 leading-relaxed font-medium group-hover:text-slate-200 transition-colors duration-300 max-w-2xl"
                 >
                     {{ introText }}
                 </p>

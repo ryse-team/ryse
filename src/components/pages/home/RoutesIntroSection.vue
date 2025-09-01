@@ -14,11 +14,11 @@ const handleHoverChange = (hovering) => {
 
 <template>
     <section
-        class="relative w-full p-8 py-16 bg-gradient-to-br from-gray-900 via-cyan-900/50 to-gray-900 text-white overflow-hidden"
+        class="relative w-full sm:p-10 md:p-4 bg-gradient-to-br from-gray-900 via-cyan-900/50 to-gray-900 text-white overflow-hidden"
     >
         <GridBackground :enableGlow="true" @hoverChange="handleHoverChange" />
 
-        <div class="relative z-10">
+        <div class="relative z-10 mt-6">
             <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 relative">
                 Discover What We Do
                 <div
