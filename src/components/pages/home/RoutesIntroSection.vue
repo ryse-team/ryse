@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from "vue";
 import GridBackground from "@/components/layouts/GridBackground.vue";
+import AboutIntro from "./AboutIntro.vue";
 import TeamIntro from "./TeamIntro.vue";
 import ProjectsIntro from "./ProjectsIntro.vue";
 
@@ -31,6 +32,7 @@ const handleHoverChange = (hovering) => {
             <div class="flex flex-col gap-12 mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
                 <TeamIntro />
                 <ProjectsIntro />
+                <AboutIntro />
             </div>
         </div>
 

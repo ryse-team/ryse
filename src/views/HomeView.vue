@@ -5,7 +5,7 @@ import { motion } from "motion-v";
 import RoutesIntroSection from "@/components/pages/home/RoutesIntroSection.vue";
 import { usePageHead, pageMeta } from "@/composables/usePageHead.js";
 
-usePageHead(pageMeta.about);
+usePageHead(pageMeta.home);
 
 const videoRef = ref(null);
 
